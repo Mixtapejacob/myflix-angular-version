@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myflix": {
+    "myFlix-Angular-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/myflix",
+            "outputPath": "dist/my-flix-angular-client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,14 +37,10 @@
               }
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -74,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "myflix:build:production"
+              "buildTarget": "myFlix-Angular-client:build:production"
             },
             "development": {
-              "buildTarget": "myflix:build:development"
+              "buildTarget": "myFlix-Angular-client:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -107,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "54479586-ddb8-4283-a457-0f5c14a1b0e0"
   }
 }
