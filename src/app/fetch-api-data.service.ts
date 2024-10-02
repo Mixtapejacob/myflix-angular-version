@@ -8,7 +8,7 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs';
 
-const apiUrl = 'https://movie-api-ul5k.onrender.com';
+const apiUrl = 'https://movie-api-ul5k.onrender.com/';
 @Injectable({
   providedIn: 'root',
 })
