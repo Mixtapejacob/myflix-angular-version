@@ -1,0 +1,18 @@
+li {
+  list-style-type: none;
+}
+
+.navbar-actions li a {
+  background-color: #2175bc;
+  color: #fff;
+  border-left: 10px solid;
+  border-right: 10px solid;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.navbar-actions li {
+  border-bottom: 1px solid #90bade;
+  list-style-type: none;
+  display: inline-block;
+}

@@ -1,0 +1,47 @@
+<!-- src/app/movie-card/movie-card.component.html -->
+<nav class="navbar">
+  <h1>MyFlix</h1>
+  <div class="navbar-logo"></div>
+  <div class="navbar-actions">
+    <!-- Add login/logout buttons or user-related actions here -->
+    <ul>
+      <li><a routerLink="/movies">Movies</a></li>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div style="display: flex">
+  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+    <mat-card-header>
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle
+        >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ movie.ImagePath }}"
+      alt="{{ movie.Title }}"
+      width="{{ 300 }}"
+    />
+    <!--Buttons to show information on Genre, Directors, and movie synopsis-->
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="showGenre(movie)">
+        Genre
+      </button>
+      <button mat-button color="primary" (click)="showDirector(movie)">
+        Director
+      </button>
+      <button mat-button color="primary" (click)="showSynopsis(movie)">
+        Synopsis
+      </button>
+      <button mat-button color="primary" (click)="addToFavorites(movie)">
+        +
+      </button>
+      <button mat-button color="primary" (click)="removeFromFavorites(movie)">
+        -
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
