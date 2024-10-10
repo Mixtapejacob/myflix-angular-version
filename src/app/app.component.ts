@@ -8,16 +8,29 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+/**
+ * This is AppComponent
+ */
 export class AppComponent {
   title = 'myFlix-Angular-client';
 
+  /**
+   * Constructor
+   * @param dialog 
+   */
   constructor(public dialog: MatDialog) {}
+  /**
+   * Will register user
+   */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       // Assigning the dialog a width
       width: '280px',
     });
   }
+  /**
+   * Will Log in user
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
       width: '280px',
