@@ -12,9 +12,18 @@ const apiUrl = 'https://movie-api-ul5k.onrender.com/';
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * An API Service.
+ * @UserRegistrationService
+ */
 export class UserRegistrationService {
   constructor(private http: HttpClient) {}
 
+  /**
+   * Register Users
+   * @param userDetails 
+   * @returns 
+   */
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
