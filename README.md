@@ -14,11 +14,11 @@ Welcome to the Angular Movie App, a responsive web application built using Angul
 - CSS Styling: SCSS
 - Backend API: Movie API (built separately)
 
-###Install Dependencies Navigate into the project directory and install the necessary dependencies:
+### Installation:
 
 cd <your-repository>
 npm install
-Running the Application Locally
+
 To run the application locally, use the following command:
 
 ng serve
